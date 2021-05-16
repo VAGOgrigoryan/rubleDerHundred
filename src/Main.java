@@ -4,12 +4,12 @@ public class Main {
         int replenishment = 2000;
         int limit = 1000;
 
-        if (replenishment >= limit) {
-            int finalAccount = (replenishment/100)+(replenishment+startingBalance);
-            System.out.println("Итоговый счет: " + finalAccount);
+        int finalAccount;
+        if (replenishment > limit) {
+            finalAccount = (replenishment/100)+(replenishment+startingBalance);
         } else {
-            int finalAccount = replenishment+startingBalance;
-            System.out.println("Итоговый счет: " + finalAccount);
+            finalAccount = replenishment+startingBalance;
         }
+        System.out.println("Итоговый счет: " + finalAccount);
     }
 }
